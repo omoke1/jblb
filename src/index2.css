@@ -1,0 +1,70 @@
+/* === Import Google Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cabinet-grotesk');
+
+/* === Tailwind === */
+@import "tailwindcss";
+
+
+/* === Theme Colors === */
+@theme {
+  --color-primary: #A9EF2E;
+  /* --color-secondary: #4CAF50; */
+  --color-bgColor: #1F1F1F;
+  --color-bodyText: #FFFFFF;
+  --color-bodyTextDim: rgba(255, 255, 255, 0.8);
+}
+
+/* === Typography === */
+h1 {
+  font-family: 'Cabinet Grotesk', 'Oswald', sans-serif, 'Comfortaa';
+  font-size: 50px;
+  font-weight: 800;
+  /* line-height: 60px; */
+  letter-spacing: 1.5px;
+}
+
+p, button, label, a {
+  font-family: 'Cabinet Grotesk', 'Comfortaa', sans-serif;
+  /* font-size: 24px; */
+  letter-spacing: 0.5px;
+}
+
+/* === Responsive Typography === */
+@media (max-width: 639px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+/* === Global === */
+* {
+  letter-spacing: -0.05em;
+  outline: none;
+  font-family: 'Cabinet Grotesk', 'Comfortaa', 'Courier New', Courier, monospace;
+}
+
+/* === Scrollbar Hidden === */
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* === Animation: Fill === */
+.animate-fill {
+  animation: animateFill 5s;
+}
+
+@keyframes animateFill {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

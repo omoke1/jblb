@@ -1,0 +1,16 @@
+export { default as bg } from "./bg.svg";
+export { default as bgAlt } from "./bgAlt.svg";
+export { default as bgMain } from "./bgMain.svg";
+export { default as logo } from "./logo.svg";
+export { default as logos } from "./logos.svg";
+export { default as poweredBy1 } from "./poweredBy1.svg";
+export { default as poweredBy2 } from "./poweredBy2.svg";
+export { default as icon1 } from "./icon1.svg";
+export { default as icon2 } from "./icon2.svg";
+export { default as icon3 } from "./icon3.svg";
+export { default as partner1 } from "./partner1.svg";
+export { default as partner2 } from "./partner2.svg";
+export { default as partner3 } from "./partner3.svg";
+export { default as partner4 } from "./partner4.svg";
+export { default as footerBg } from "./footerBg.png";
+export { default as playNow } from "./playNow.svg";

@@ -1,0 +1,91 @@
+/* === Import Google Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cabinet-grotesk');
+@import url('https://fonts.cdnfonts.com/css/space-grotesk');
+
+/* === Tailwind === */
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Panchang';
+  src: url('./assets/fonts/Panchang-Variable.ttf') format('truetype');
+  font-style: normal;
+}
+
+/* === Theme Colors === */
+@theme {
+  --color-primary: #A9EF2E;
+  --color-bgColor: #1F1F1F;
+  --color-bodyText: #FFFFFF;
+  --color-bodyTextDim: rgba(255, 255, 255, 0.8);
+  --font-panchang: 'Panchang', sans-serif;
+}
+
+/* === Typography === */
+h1 {
+  font-family: 'Panchang', 'Oswald', sans-serif, 'Comfortaa';
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+/* === NEW: h2 styling (matches Tailwind classes provided) === */
+h2 {
+  font-family: 'Panchang', 'Oswald', sans-serif, 'Comfortaa';
+  font-size: 28px;        /* lg:!text-[28px] */
+  font-weight: 500;       /* !font-normal */
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1023px) {
+  h2 {
+    font-size: 18px;      
+  }
+}
+
+p, button, label, a {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+}
+
+/* === Responsive Typography === */
+@media (max-width: 639px) {
+  h1 {
+    font-size: 30px;
+  }
+  p, button, label, a {
+    font-size: 14px;
+  }
+}
+
+/* === Global === */
+* {
+  letter-spacing: -0.05em;
+  outline: none;
+}
+
+/* === Scrollbar Hidden === */
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* === Animation: Fill === */
+.animate-fill {
+  animation: animateFill 5s;
+}
+
+@keyframes animateFill {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
