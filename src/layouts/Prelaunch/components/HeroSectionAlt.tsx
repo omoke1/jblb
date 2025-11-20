@@ -65,7 +65,7 @@ const HeroSection = () => {
       <div className="relative z-10 flex flex-col items-center">
         <div className="md:w-[70%] text-center mt-20 flex flex-col justify-center items-center">
           <img src={logo} alt="logo" className="relative size-[80px]"/>
-          <img src={logo} alt="logo" className="relative size-[30px] left-[30vw]"/>
+          <img src={logo} alt="logo" className="relative hidden md:block size-[30px] left-[30vw]"/>
           <div className="flex items-start text-primary">
             <h2 >The World's First YieldSport™</h2>
           </div>
