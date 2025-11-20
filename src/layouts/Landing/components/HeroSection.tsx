@@ -2,57 +2,57 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { logo, bg, poweredBy2, poweredBy1 } from "../../../assets/images";
 import { Button } from "../../../components/Button";
 import { useState } from "react";
-import Card from "./Card";
+// import Card from "./Card";
 
 const HeroSection = () => {
   const options = ['All', 'Starting Soon', 'Live Battles', 'Completed Battles', 'My Battles']; 
   const [selectedOption, setSelectedOption] = useState('All');
   
-  type CardStatus = "Starts" | "Live" | "Rewarded";
+//   type CardStatus = "Starts" | "Live" | "Rewarded";
 
-interface CardProps {
-  time: string;
-  title: string;
-  status: CardStatus;
-  token: string;
-  tier: number;
-  pool: number;
-  players: number;
-  duration: string;
-}
+// interface CardProps {
+//   time: string;
+//   title: string;
+//   status: CardStatus;
+//   token: string;
+//   tier: number;
+//   pool: number;
+//   players: number;
+//   duration: string;
+// }
 
-const cardData: CardProps[] = [
-  {
-    time: "02:15:30",
-    title: "Crypto Clash",
-    status: "Starts",
-    token: "Eth21H4",
-    tier: 3,
-    pool: 5000,
-    players: 10,
-    duration: "2h 30m",
-  },
-  {
-    time: "04:45:10",
-    title: "Battle Royale",
-    status: "Live",
-    token: "Btc9K2",
-    tier: 2,
-    pool: 3500,
-    players: 8,
-    duration: "1h 15m",
-  },
-  {
-    time: "01:10:05",
-    title: "Token Titans",
-    status: "Rewarded",
-    token: "SolX5",
-    tier: 1,
-    pool: 2500,
-    players: 12,
-    duration: "3h 00m",
-  },
-];
+// const cardData: CardProps[] = [
+//   {
+//     time: "02:15:30",
+//     title: "Crypto Clash",
+//     status: "Starts",
+//     token: "Eth21H4",
+//     tier: 3,
+//     pool: 5000,
+//     players: 10,
+//     duration: "2h 30m",
+//   },
+//   {
+//     time: "04:45:10",
+//     title: "Battle Royale",
+//     status: "Live",
+//     token: "Btc9K2",
+//     tier: 2,
+//     pool: 3500,
+//     players: 8,
+//     duration: "1h 15m",
+//   },
+//   {
+//     time: "01:10:05",
+//     title: "Token Titans",
+//     status: "Rewarded",
+//     token: "SolX5",
+//     tier: 1,
+//     pool: 2500,
+//     players: 12,
+//     duration: "3h 00m",
+//   },
+// ];
   return (
     <div className="p-4 sm:px-[8vw] relative min-h-screen w-full overflow-hidden bg-black">      
       {/* Stars Animation */}
@@ -136,7 +136,7 @@ const cardData: CardProps[] = [
       </div>
 
       <div className="mb-20 flex flex-wrap gap-6">
-      {cardData.map((card, index) => (
+      {/* {cardData.map((card, index) => (
         <Card
           key={index}
           time={card.time}
@@ -148,7 +148,7 @@ const cardData: CardProps[] = [
           players={card.players}
           duration={card.duration}
         />
-      ))}
+      ))} */}
     </div>
 
       {/* Animations */}

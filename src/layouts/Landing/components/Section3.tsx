@@ -30,7 +30,6 @@ const Section3 = () => {
               img={icon1}
               buttonName="EXPLORE THE TECH"
               buttonClassName="bg-primary text-black"
-              firstCard={true}
             />
             <Card
               title="Your Team, Your Legacy"
@@ -70,10 +69,9 @@ interface CardProps {
   img: string;
   buttonName: string;
   buttonClassName?: string;
-  firstCard?: boolean;
 }
 
-const Card = ({ title, content, img, buttonName, buttonClassName, firstCard }: CardProps) => {
+const Card = ({ title, content, img, buttonName, buttonClassName, }: CardProps) => {
   return (
     <div className="border-t-2 w-[70vw] max-w-[300px] h-[380px] border-1 border-bgColor ">
       {/* {firstCard && <div className="relative w-[50%] top-0 border-2 border-primary"></div>} */}

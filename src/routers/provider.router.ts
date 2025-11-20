@@ -1,6 +1,4 @@
-import { createBrowserRouter, redirect } from "react-router-dom";
-import SignIn from "../layouts/SignInLayout/SignIn";
-import SignUp from "../layouts/SignUpLayout/SignUp";
+import { createBrowserRouter, } from "react-router-dom";
 import Landing from "../layouts/Landing/LandingAlt";
 
 export const ProviderRoutePaths = {
@@ -35,13 +33,5 @@ export const ProviderRouter = createBrowserRouter([
   {
     path: ProviderRoutePaths.Root,
     Component: Landing,
-  },
-  {
-    path: ProviderRoutePaths.SignIn,
-    Component: SignIn,
-  },
-  {
-    path: ProviderRoutePaths.SignUp,
-    Component: SignUp,
   },
 ]);

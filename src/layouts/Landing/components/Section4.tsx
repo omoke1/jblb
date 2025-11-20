@@ -1,4 +1,3 @@
-import { Button } from "../../../components/ButtonAlt";
 import { partner1, partner2, partner3, partner4 } from "../../../assets/images";
 
 const Section4 = () => {
