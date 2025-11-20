@@ -89,3 +89,27 @@ p, button, label, a {
     transform: translateX(0%);
   }
 }
+
+.neon-box {
+  position: relative;
+}
+
+.neon-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid #A9EF2E;
+  filter: drop-shadow(0 0 6px #A9EF2E);
+  pointer-events: none;
+}
+
+.neon-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/noise.png"); /* put your noise image here */
+  background-size: cover;
+  opacity: 0.4;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}

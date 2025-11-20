@@ -30,7 +30,7 @@ const Section5 = () => {
           <Button title="PHASE 3" className="py-2  px-1 sm:px-2 text-bodyTextDim"/>
         </div>
 
-        <div className="flex flex-wrap justify-center">
+        <div className="flex flex-wrap justify-center ">
           <Card 
             title="Phase 1: MVP"
             content={[
@@ -80,7 +80,7 @@ interface CardProps {
 const Card = ({ title, content,  firstCard }: CardProps) => {
   return (
     <div
-      className={`w-[70vw] sm:min-w-[350px]  p-4 py-6 flex flex-col items-start justify-between h-full ${
+      className={`w-[70vw] sm:min-w-[350px]  max-w-[350px] p-4 py-6 flex flex-col items-start justify-between h-full ${
         firstCard ? 'text-white' : 'text-bodyTextDim/50'
       }`}
     >
