@@ -2,7 +2,7 @@ import { bgMain } from "../../assets/images";
 import { Footer } from "./components/Footer";
 import HeroSection from "./components/HeroSectionAlt";
 import Faq from "./components/Faq.tsx";
-import Solution from "./components/solution.tsx";
+import Solution from "./components/Solution.tsx";
 import Video from "./components/Video.tsx";
 
 const Prelaunch = () => {
