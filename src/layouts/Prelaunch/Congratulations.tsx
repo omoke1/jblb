@@ -90,11 +90,11 @@ const Congratulations = () => {
             }}
           >
             {/* Avatar */}
-            <div className="p-4 bg-primary flex flex-col justify-center rounded-full">
+            <div className="p-4 bg-primary/10 flex flex-col justify-center rounded-full">
               <img
                 src={avatar}
                 alt="avatar"
-                className="p-4 bg-[#A9EF2E] rounded-full min-w-[100px] max-w-[200px] w-[20vw] mx-auto"
+                className="p-4 bg-primary/30 rounded-full min-w-[100px] max-w-[200px] w-[20vw] mx-auto"
               />
             </div>
 
