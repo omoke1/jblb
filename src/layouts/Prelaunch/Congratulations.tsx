@@ -94,7 +94,7 @@ const Congratulations = () => {
               <img
                 src={avatar}
                 alt="avatar"
-                className="p-4 bg-primary/30 rounded-full min-w-[100px] max-w-[200px] w-[20vw] mx-auto"
+                className="p-4 bg-primary/20 rounded-full min-w-[100px] max-w-[200px] w-[20vw] mx-auto"
               />
             </div>
 
