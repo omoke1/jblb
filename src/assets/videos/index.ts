@@ -1,0 +1,1 @@
+export { default as waitlistVideo } from "./waitlistVideo.mp4";

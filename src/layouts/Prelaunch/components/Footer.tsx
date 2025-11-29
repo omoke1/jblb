@@ -4,7 +4,7 @@ export const Footer = () => {
   
 
   return (
-      <div className=" overflow-x-hidden absolute z-[10] border-t-2 border-borderColor bottom-0 w-full text-bodyText/50 flex flex-col justify-center items-center flex-wrap gap-2 pt-4 pb-2">
+      <div className=" overflow-x-hidden absolute z-[10] border-t-1 border-borderColor bottom-0 w-full text-bodyText/50 flex flex-col justify-center items-center flex-wrap gap-2 pt-4 pb-2">
         
         <p className="whitespace-nowrap">© 2025 JBLB • All rights reserved.</p>
 

@@ -1,9 +1,17 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { playNowAlt } from "../../../assets/images";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { waitlistVideo } from "../../../assets/videos";
 
 const Video = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  const handlePlay = () => {
+    setIsPlaying(true);
+    videoRef.current?.play();
+  };
+
   return (
     <div className=" border-t-1 border-borderColor py-20  relative flex justify-center w-full overflow-hidden">
       
@@ -30,26 +38,30 @@ const Video = () => {
             <Icon icon="material-symbols:square" className="size-3 text-primary" />
             <Icon icon="material-symbols:square" className="size-3 text-primary" />
           </div>
+
           {/* Video */}
-          <div className="relative  h-[280px] bg-bgColor ">
-      
-            {/* Placeholder Icon */}
-            {!isLoaded && (
-              <div className="relative h-full w-full bg-borderColor flex flex-col items-center justify-center">
-                <img src={playNowAlt} alt="play now" className="h-4 mx-4 relative left-14 bottom-2 "/>
-                <div className=" top-[50px] inset-0 w-fit h-fit p-2 bg-bgColor opacity-60 text-white">
-                  <Icon icon="ph:play-fill" width={30} className="" />
-                </div>
+          <div className="relative h-fit bg-bgColor">
+            
+            {/* Play Overlay */}
+            {!isPlaying && (
+              <div
+                className="absolute inset-0 z-20 bg-black/40 flex flex-col items-center justify-center cursor-pointer"
+                onClick={handlePlay}
+              >
+                <img src={playNowAlt} alt="play now" className="relative h-3 sm:h-4 left-8 sm:left-14" />
+                <div className=" top-[50px] inset-0 w-fit h-fit p-2 bg-bgColor opacity-60 text-white"> <Icon icon="ph:play-fill" width={30} className="" /> </div>
               </div>
             )}
 
+            {/* Video Element */}
             <video
-              src="https://assets.website-files.com/64a7f3f6f5f3f4e5b8e2d6c1/64c4f3e4f5f3f4e5b8e2d8a0_JBLB%20Teaser%20Video.mp4"
-              autoPlay
+              ref={videoRef}
+              src={waitlistVideo}
+              className="relative w-full max-h-[280px]"
               loop
               muted
-              className="w-full h-auto"
-              onLoadedData={() => setIsLoaded(true)}
+              controls={isPlaying}
+              playsInline
             ></video>
           </div>
         </div>
