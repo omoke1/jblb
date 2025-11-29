@@ -13,7 +13,7 @@ const Video = () => {
   };
 
   return (
-    <div className=" border-t-1 border-borderColor py-20  relative flex justify-center w-full overflow-hidden">
+    <div className="py-20  relative flex justify-center w-full overflow-hidden">
       
       {/* Stars animation */}
       <div className="absolute inset-0 pointer-events-none">
