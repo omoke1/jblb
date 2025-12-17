@@ -129,16 +129,20 @@ const Congratulations = () => {
               )`,
             }}
           >
-            <div className="flex justify-around w-full gap-1">
-              {Array.from({ length: screenWidth }).map((_, i) => (
+            <div className="flex w-full gap-[2px] justify-center overflow-hidden">
+            {Array.from({ length: screenWidth*3 }).map((_, i) => {
+              const width = Math.floor(Math.random() * 4) + 1; // 1–4px
+
+              return (
                 <div
                   key={i}
-                  className={`${
-                    i === 4 || i === screenWidth - 4 ? "h-[95px]" : "h-[80px]"
-                  } w-[0.8vw] bg-primary`}
+                  style={{ width }}
+                  className="h-[80px] bg-primary"
                 />
-              ))}
-            </div>
+              );
+            })}
+          </div>
+
             <div className="flex relative top-[-2] gap-2 flex-wrap justify-center items-center">
               <p className="text-white text-xs tracking-widest uppercase">Powered by JBLB</p>
               <img src={logo} alt="Logo" className="size-6" />
@@ -189,13 +193,13 @@ const Congratulations = () => {
 
 export const useScreenWidth = () => {
   const [width, setWidth] = useState(() =>
-    Math.round(window.innerWidth / 10) / 2
+    Math.round(window.innerWidth / 10) / 3
   );
 
   useEffect(() => {
     const handleResize = () => {
       const w = window.innerWidth;
-      const rounded = Math.round(Math.round(w / 10) / 2);
+      const rounded = Math.round(Math.round(w / 10) / 3);
       setWidth(rounded);
     };
 
