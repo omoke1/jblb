@@ -1,4 +1,4 @@
-import { solutionImg1, solutionImg2, solutionImg3 } from "../../../assets/images";
+import { solutionImg1, solutionImg1Alt, solutionImg2, solutionImg2Alt, solutionImg3, solutionImg3Alt } from "../../../assets/images";
 
 const Solution = () => {
   return (
@@ -29,7 +29,7 @@ const Solution = () => {
           <p className="text-bodyTextDim">Forge your club, accumulate your CValue, and write your name into the annals of the first YieldSport™. Will you be a player, a founder, or a legend?</p>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center mt-4">
+        <div className="hidden md:flex flex-wrap items-center justify-center mt-4">
           <img
             src={solutionImg1}
             alt="Solution Image 1"
@@ -44,6 +44,25 @@ const Solution = () => {
             src={solutionImg3}
             alt="Solution Image 3"
             className="w-[40vw] sm:w-[300px] h-auto -mx-2"
+          />
+        </div>
+
+        {/* for small screens */}
+        <div className="flex md:hidden gap-10 flex-wrap items-center justify-center mt-4">
+          <img
+            src={solutionImg1Alt}
+            alt="Solution Image 1"
+            className="w-[60vw]  h-auto"
+          />
+          <img
+            src={solutionImg2Alt}
+            alt="Solution Image 2"
+            className="w-[60vw]  h-auto"
+          />
+          <img
+            src={solutionImg3Alt}
+            alt="Solution Image 3"
+            className="w-[60vw]  h-auto"
           />
         </div>
 

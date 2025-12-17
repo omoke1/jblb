@@ -45,7 +45,7 @@ const Congratulations = () => {
   return (
     <div
       ref={pageRef}
-      className="bg-[#000004] absolute fit w-full opacity-100 bg-center text-white flex flex-col items-center pb-40 min-h-screen overflow-x-hidden"
+      className="bg-[#000004] px-[7vw] absolute fit w-full opacity-100 bg-center text-white flex flex-col items-center pb-40 min-h-screen overflow-x-hidden"
     >
       <div
         className="w-[7vw] border-r-2 border-borderColor z-[50] absolute left-0 top-0 h-full opacity-70 bg-repeat-y bg-top"
@@ -147,7 +147,7 @@ const Congratulations = () => {
         </div>
 
         <div className="flex flex-col gap-4">
-          <h2 className="sm:!text-2xl md:!text-3xl font-bold uppercase tracking-wide">
+          <h2 className="!text-xl sm:!text-2xl md:!text-3xl font-bold uppercase tracking-wide">
             Congratulations You're now <span className="text-primary drop-shadow-[0_0_8px_rgba(169,239,46,0.6)]">on the List!</span>
           </h2>
           <p className="text-bodyTextDim max-w-md mx-auto">
@@ -157,17 +157,17 @@ const Congratulations = () => {
           </p>
           
           {/* Buttons with confetti triggers */}
-          <div className="flex justify-center gap-2 flex-wrap items-center">
+          <div className="flex p-2 flex-col sm:flex-row justify-center gap-2 flex-wrap items-center">
             <Button
               title="SHARE ON X"
               icon="prime:twitter"
-              className="bg-primary text-black px-4 py-2 whitespace-nowrap"
+              className="bg-primary w-full sm:w-fit text-black px-4 py-2 whitespace-nowrap"
               onClick={()=>triggerTechConfetti()}
             />
             <Button
-              title="DOWNLOAD"
-              icon="material-symbols:download-sharp"
-              className="bg-primary text-black px-4 py-2 whitespace-nowrap"
+              title="CHECK MAIL"
+              icon="octicon:mail-24"
+              className="bg-primary w-full sm:w-fit text-black px-4 py-2 whitespace-nowrap"
               onClick={downloadImage}
             />
           </div>

@@ -25,45 +25,54 @@
 
 /* === Typography === */
 h1 {
-  font-family: 'Panchang', 'Oswald', sans-serif, 'Comfortaa';
-  font-size: 50px;
+  font-family: 'Space Grotesk', 'Oswald', sans-serif, 'Comfortaa';
+  font-size: 44px;        /* was 50px */
   font-weight: 600;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
 }
 
-/* === NEW: h2 styling (matches Tailwind classes provided) === */
+/* === h2 styling (improved hierarchy) === */
 h2 {
-  font-family: 'Panchang', 'Oswald', sans-serif, 'Comfortaa';
-  font-size: 28px;        /* lg:!text-[28px] */
-  font-weight: 500;       /* !font-normal */
-  letter-spacing: 1px;
+  font-family: 'Space Grotesk', 'Panchang', 'Oswald', sans-serif, 'Comfortaa';
+  font-size: 30px;        /* increased from 24px */
+  font-weight: 600;       /* stronger presence */
+  letter-spacing: 0.6px;
 }
 
 @media (max-width: 1023px) {
   h2 {
-    font-size: 18px;      
+    font-size: 22px;      /* was collapsing to body size */
   }
 }
 
+@media (max-width: 639px) {
+  h2 {
+    font-size: 18px;      /* still clearly above 13px body text */
+  }
+}
+
+
+/* === Body text === */
 p, button, label, a {
   font-family: 'Space Grotesk', sans-serif;
-  letter-spacing: 0.5px;
-  font-size: 16px;
+  letter-spacing: 0.4px;
+  font-size: 15px;       /* was 16px */
 }
 
 /* === Responsive Typography === */
 @media (max-width: 639px) {
   h1 {
-    font-size: 30px;
+    font-size: 26px;      /* was 30px */
   }
+
   p, button, label, a {
-    font-size: 14px;
+    font-size: 13px;     /* was 14px */
   }
 }
 
 /* === Global === */
 * {
-  letter-spacing: -0.05em;
+  letter-spacing: -0.04em; /* slightly reduced */
   outline: none;
 }
 
@@ -90,4 +99,3 @@ p, button, label, a {
     transform: translateX(0%);
   }
 }
-
